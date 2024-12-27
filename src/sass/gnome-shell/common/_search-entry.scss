@@ -8,17 +8,17 @@
   caret-color: $text;
   selection-background-color: $divider;
   selected-color: on($primary) !important;
-  @include entry(normal, $bc: $base);
+  @include entry(normal, $bc: on(black, divider));
 
   &:hover {
-    @include entry(hover, $bc: $base);
+    @include entry(hover, $bc: overlay(black, active));
   }
 
   &:focus {
     @if $theme == 'grey' {
-      @include entry(focus, $bc: $base, $fc: white);
+      @include entry(focus, $bc: on(black, track), $fc: white);
     } @else {
-      @include entry(focus, $bc: $base);
+      @include entry(focus, $bc: on(black, track));
     }
   }
 

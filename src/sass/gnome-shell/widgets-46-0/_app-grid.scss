@@ -3,23 +3,24 @@
 
 $app_icon_size: 96px;
 $app_folder_size: 720px;
+$app_icon_spacing: 4px;
 
 // app icons
 .icon-grid {
-  row-spacing: 12px;
-  column-spacing: 12px;
-  max-row-spacing: 36px;
-  max-column-spacing: 36px;
-  page-padding-top: 24px;
-  page-padding-bottom: 24px;
-  page-padding-left: 18px;
-  page-padding-right: 18px;
+  row-spacing: $app_icon_spacing * 2;
+  column-spacing: $app_icon_spacing * 2;
+  max-row-spacing: $app_icon_spacing * 12;
+  max-column-spacing: $app_icon_spacing * 12;
+  page-padding-top: $app_icon_spacing * 4;
+  page-padding-bottom: $app_icon_spacing * 4;
+  page-padding-left: $app_icon_spacing * 2;
+  page-padding-right: $app_icon_spacing * 2;
 }
 
 .overview-tile {
   color: on($osd, secondary);
   border-radius: $base_radius * 2.5;
-  padding: 6px;
+  padding: 18px;
   border: none;
   transition-duration: 100ms;
   text-align: center;
@@ -46,6 +47,7 @@ $app_folder_size: 720px;
 .app-folder {
   background-color: on($osd, divider);
   border-radius: $base_radius * 2.5;
+  padding: 18px;
   color: on($osd, secondary);
 
   .overview-icon {
@@ -89,11 +91,11 @@ $app_folder_size: 720px;
   height: $app_folder_size;
   border-radius: $menu_radius * 3;
   padding: $base_padding * 2;
-  background-color: $osd;
+  background-color: on(black, divider);
 
   @if $rimless == 'false' {
     border: 1px solid black;
-    box-shadow: inset 0 0 0 1px highlight($osd);
+    box-shadow: inset 0 0 0 1px highlight(on(black, divider));
   } @else {
     border: none;
     box-shadow: none;

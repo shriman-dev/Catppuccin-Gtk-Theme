@@ -3,8 +3,8 @@
 // thumbnails in overview
 .workspace-thumbnails {
   visible-width: 32px; //amount visible before hover
-  spacing: $base_spacing;
-  padding: $base_padding;
+  spacing: $base_spacing + 8px;
+  padding: 0px;
 
   .workspace-thumbnail {
     color: on(black, secondary);
@@ -25,7 +25,7 @@
 // selected indicator
 .workspace-thumbnail-indicator {
   border: 3px solid $primary;
-  border-radius: 3px;
-  padding: 0px;
+  border-radius: 3px + $base_radius;
+  padding: 3px;
   // background-color: transparentize($primary_color, 0.9);
 }

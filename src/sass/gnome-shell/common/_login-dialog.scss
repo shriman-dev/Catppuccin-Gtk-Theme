@@ -13,6 +13,7 @@
 .unlock-dialog {
   //reset
   border: none;
+  border-radius: $base_radius;
   background-color: transparent;
 
   StEntry {
@@ -23,9 +24,9 @@
     border-radius: $circular_radius;
     caret-color: on($osd);
 
-    @include entry(flat-normal, $tc: on($osd));
-    &:focus { @include entry(flat-focus, $tc: on($osd)); }
-    &:insensitive { @include entry(flat-insensitive, $tc: on($osd, disabled)); }
+    @include entry(normal, $bc: on(black, track));
+    &:focus { @include entry(focus, $bc: on(black, track)); }
+    &:insensitive { @include entry(insensitive, $bc: on(black, track)); }
 
     StLabel.hint-text {
       color: on($osd, disabled);
@@ -37,16 +38,16 @@
   .modal-dialog-button {
     padding: 0 16px;
     border: none;
-    @include button(flat-normal, $tc: on($primary));
-    &:hover, &:focus { @include button(flat-hover, $tc: on($primary)); }
-    &:active { @include button(flat-active, $tc: on($primary)); }
-    &:insensitive { @include button(flat-insensitive, $tc: on($primary, disabled)); }
+    @include button(flat-normal, $tc: on($osd));
+    &:hover, &:focus { @include button(hover, $tc: on($osd)); }
+    &:active { @include button(active, $tc: on($osd)); }
+    &:insensitive { @include button(insensitive, $tc: on($osd, disabled)); }
 
     &:default {
-      @include button(normal, $tc: on($primary));
-      &:hover, &:focus { @include button(hover, $tc: on($primary)); }
-      &:active { @include button(active, $tc: on($primary)); }
-      &:insensitive { @include button(insensitive, $tc: on($primary, disabled)); }
+      @include button(normal, $tc: on($osd));
+      &:hover, &:focus { @include button(hover, $tc: on($osd)); }
+      &:active { @include button(active, $tc: on($osd)); }
+      &:insensitive { @include button(insensitive, $tc: on($osd, disabled)); }
     }
   }
 
@@ -108,6 +109,7 @@
   border-radius: $menu_radius;
   padding: 6px;
   color: on(black, secondary);
+  background-color: $divider !important;
 
   &:ltr .user-widget { padding-right: 1em; }
   &:rtl .user-widget { padding-left: 1em; }

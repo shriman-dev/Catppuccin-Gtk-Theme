@@ -54,11 +54,11 @@
 .app-folder-dialog {
   border-radius: $menu_radius * 3;
   padding: $base_padding * 2;
-  background-color: $osd;
+  background-color: on(black, divider);
 
   @if $rimless == 'false' {
     border: 1px solid black;
-    box-shadow: inset 0 0 0 1px highlight($osd);
+    box-shadow: inset 0 0 0 1px highlight(on(black, divider));
   }
 
   & .folder-name-container {
