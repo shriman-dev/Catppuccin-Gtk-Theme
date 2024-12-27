@@ -24,9 +24,9 @@
     border-radius: $circular_radius;
     caret-color: on($osd);
 
-    @include entry(normal, $bc: on(black, track));
-    &:focus { @include entry(focus, $bc: on(black, track)); }
-    &:insensitive { @include entry(insensitive, $bc: on(black, track)); }
+    @include entry(normal, $bc: on(black, divider));
+    &:focus { @include entry(focus, $bc: on(black, divider)); }
+    &:insensitive { @include entry(insensitive, $bc: on(black, divider)); }
 
     StLabel.hint-text {
       color: on($osd, disabled);
@@ -109,13 +109,12 @@
   border-radius: $menu_radius;
   padding: 6px;
   color: on(black, secondary);
-  background-color: $divider !important;
 
   &:ltr .user-widget { padding-right: 1em; }
   &:rtl .user-widget { padding-left: 1em; }
 
   &:focus {
-    background-color: $fill !important;
+    background-color: on(black, divider) !important;
 
     // .login-dialog-timed-login-indicator {
     //   background-color: $track;
@@ -123,12 +122,12 @@
   }
 
   &:hover, &:focus:hover {
-    background-color: $divider !important;
+    background-color: overlay(black, active) !important;
     color: on(black, secondary);
   }
 
   &:active, &:focus:active {
-    background-color: $track !important;
+    background-color: on(black, track) !important;
     color: on(black, secondary);
   }
 

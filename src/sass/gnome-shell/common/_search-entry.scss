@@ -16,9 +16,9 @@
 
   &:focus {
     @if $theme == 'grey' {
-      @include entry(focus, $bc: on(black, track), $fc: white);
+      @include entry(focus, $bc: on(black, divider), $fc: white);
     } @else {
-      @include entry(focus, $bc: on(black, track));
+      @include entry(focus, $bc: on(black, divider));
     }
   }
 
