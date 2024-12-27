@@ -21,7 +21,7 @@ $menuitem_size: if($compact == 'false', 28px, 24px);
 // Radiuses
 //
 
-$button_radius: 6px;
+$button_radius: 18px;
 $card_radius: $button_radius + 6px;
 $menuitem_radius: $button_radius;
 $window_radius: $button_radius + $base_padding;

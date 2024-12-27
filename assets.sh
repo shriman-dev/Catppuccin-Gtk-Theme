@@ -218,40 +218,40 @@ make_assets() {
   if [[ "$scheme" == '-Catppuccin' ]]; then
     case "$theme" in
       '')
-        theme_color_dark='#1e66f5'
-        theme_color_light='#8caaee'
+        theme_color_dark='#b6c0ff'
+        theme_color_light='#94a3ff'
         ;;
       -Purple)
-        theme_color_dark='#8839ef'
-        theme_color_light='#ca9ee6'
+        theme_color_dark='#d1aaff'
+        theme_color_light='#c28fff'
         ;;
       -Pink)
-        theme_color_dark='#ea76cb'
-        theme_color_light='#f4b8e4'
+        theme_color_dark='#ffc2ee'
+        theme_color_light='#ff8ade'
         ;;
       -Red)
-        theme_color_dark='#e64553'
-        theme_color_light='#ea999c'
+        theme_color_dark='#ff9393'
+        theme_color_light='#ff8585'
         ;;
       -Orange)
-        theme_color_dark='#fe640b'
-        theme_color_light='#fe8019'
+        theme_color_dark='#fab387'
+        theme_color_light='#ffaa75'
         ;;
       -Yellow)
-        theme_color_dark='#df8e1d'
-        theme_color_light='#ef9f76'
+        theme_color_dark='#ffe8b5'
+        theme_color_light='#ffdd92'
         ;;
       -Green)
-        theme_color_dark='#40a02b'
-        theme_color_light='#a6d189'
+        theme_color_dark='#c1ffbc'
+        theme_color_light='#a2ff9b'
         ;;
       -Teal)
-        theme_color_dark='#179299'
-        theme_color_light='#81c8be'
+        theme_color_dark='#aafff1'
+        theme_color_light='#85ffea'
         ;;
       -Grey)
-        theme_color_dark='#5c5f77'
-        theme_color_light='#ccd0da'
+        theme_color_dark='#9397af'
+        theme_color_light='#bbc1dc'
         ;;
     esac
   fi
@@ -339,11 +339,11 @@ make_assets() {
         titlebar_dark='#272e33'
         ;;
       -Catppuccin)
-        background_light='#eff1f5'
-        background_dark='#292c3c'
-        background_darker='#303446'
-        titlebar_light='#e6e9ef'
-        titlebar_dark='#24273a'
+        background_light='#cdd6f4'
+        background_dark='#1e1e2e'
+        background_darker='#343746'
+        titlebar_light='#c7cfec'
+        titlebar_dark='#181825'
         ;;
     esac
   fi
@@ -445,13 +445,13 @@ make_assets() {
       ;;
     -Catppuccin)
       if [[ "$color" == '-Light' ]]; then
-        button_close="#e64553"
-        button_max="#40a02b"
-        button_min="#df8e1d"
+        button_close="#ff8585"
+        button_max="#a2ff9b"
+        button_min="#ffdd92"
       else
-        button_close="#ea999c"
-        button_max="#a6d189"
-        button_min="#e5c890"
+        button_close="#ff9393"
+        button_max="#c1ffbc"
+        button_min="#ffe8b5"
       fi
       ;;
     -Everforest)
