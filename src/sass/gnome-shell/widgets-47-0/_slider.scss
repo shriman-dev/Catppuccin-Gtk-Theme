@@ -5,18 +5,21 @@ $slide_active_color: if($variant == 'dark' and $theme == 'grey', rgba(white, 0.8
 $slide_size: if($compact == 'false', 7px, 6px);
 
 .slider {
-  color: $slide_color;
+  color: $primary;
 
-  -slider-handle-radius: $slide_size;
+  -slider-handle-radius: 12px;
+  -slider-border-width: 2px;
+  -slider-handle-border-width: 2px;
+  -slider-handle-border-color: $popover;
 
   // barlevels are for >= 3.29.90
-  -barlevel-height: 2px;
-  -barlevel-background-color: $track;
+  -barlevel-height: 24px;
+  -barlevel-background-color: rgba($text, 0.02);
   -barlevel-active-background-color: $slide_active_color;
   -barlevel-overdrive-color: $destructive;
-  -barlevel-overdrive-separator-width: 2px;
+  -barlevel-overdrive-separator-width: 1px;
 
-  &:hover {
-    color: lighten($slide_color, 7%);
-  }
+//  &:hover {
+//    color: lighten($slide_color, 7%);
+//  }
 }
