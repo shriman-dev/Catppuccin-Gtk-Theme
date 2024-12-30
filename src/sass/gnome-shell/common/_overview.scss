@@ -12,6 +12,7 @@
 }
 
 #overview {
+  //background-image: url('/usr/share/backgrounds/catcat-os/altos_odyssey_blurred.jpg');
   spacing: 24px;
   StScrollBar { @extend %overview_scrollbar; }
 }
