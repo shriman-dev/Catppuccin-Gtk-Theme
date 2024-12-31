@@ -14,8 +14,8 @@
     background-color: transparent;
     height: $item_size + $base_margin * 2;
   } @else {
-    background-color: $panel;
-    height: $item_size + 2px;
+    background-color: rgba($panel, 0.25);
+    height: $item_size;
   }
 
   // the rounded outset corners
