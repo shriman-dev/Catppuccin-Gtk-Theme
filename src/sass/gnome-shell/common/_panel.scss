@@ -30,8 +30,8 @@
 
   // panel menus
   .panel-button {
-    -natural-hpadding: $base_padding * 2;
-    -minimum-hpadding: $base_padding;
+    -natural-hpadding: 2px;
+    -minimum-hpadding: 2px;
     font-weight: bold;
     color: $panel-text-secondary;
     transition-duration: 150ms;
