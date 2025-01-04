@@ -19,7 +19,11 @@ $slide_size: if($compact == 'false', 7px, 6px);
   -barlevel-overdrive-color: $destructive;
   -barlevel-overdrive-separator-width: 1px;
 
-//  &:hover {
-//    color: lighten($slide_color, 7%);
-//  }
+  &:hover {
+    @if $gnome_version == 'default' and $variant == 'dark' and $theme == 'grey' {
+      color: lighten($slide_color, 7%);
+    } @else {
+      color: st-lighten($slide_color, 7%);
+    }
+  }
 }

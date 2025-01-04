@@ -18,7 +18,7 @@
 
   StEntry {
     selection-background-color: $primary;
-    selected-color: on($primary);
+    selected-color: $primary-text;
     padding: 4px 8px;
     min-height: $item_size - $base_padding;
     border-radius: $circular_radius;
