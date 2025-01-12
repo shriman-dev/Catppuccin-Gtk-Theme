@@ -228,14 +228,14 @@
 }
 
 // Dash to panel
-#dashtopanelTaskbar .dash-item-container > StWidget,
-.dashtopanelMainPanel .dash-item-container .show-apps {
-    color: $panel-text-secondary;
-}
-
 .dashtopanelMainPanel .show-apps {
+    color: $panel-text-secondary !important;
     width: 20px;
     height: 20px;
+}
+
+.dashtopanelMainPanel .dash-item-container .show-apps .overview-icon {
+    color: $panel-text-secondary !important;
 }
 
 .dashtopanelMainPanel {
