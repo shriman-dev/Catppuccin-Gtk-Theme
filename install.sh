@@ -103,7 +103,11 @@ install() {
   [[ "${color}" == '-Light' ]] && local ELSE_LIGHT="${color}"
   [[ "${color}" == '-Dark' ]] && local ELSE_DARK="${color}"
 
-  local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  if [[ "${name}" == 'Catppuccin' ]]; then
+    local THEME_DIR="${1}/${2}${3}${4}${5}"
+  else
+    local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  fi
 
   [[ -d "${THEME_DIR}" ]] && rm -rf "${THEME_DIR}"{'','-hdpi','-xhdpi'}
 
@@ -605,7 +609,11 @@ link_libadwaita() {
   local size="${5}"
   local scheme="${6}"
 
-  local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  if [[ "${name}" == 'Catppuccin' ]]; then
+    local THEME_DIR="${1}/${2}${3}${4}${5}"
+  else
+    local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  fi
 
   rm -rf "${HOME}/.config/gtk-4.0/"{assets,gtk.css,gtk-dark.css}
 
@@ -696,7 +704,11 @@ uninstall() {
   local size="${5}"
   local scheme="${6}"
 
-  local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  if [[ "${name}" == 'Catppuccin' ]]; then
+    local THEME_DIR="${1}/${2}${3}${4}${5}"
+  else
+    local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  fi
 
   if [[ "$uninstall" == 'true' ]]; then
     type='Uninstall'

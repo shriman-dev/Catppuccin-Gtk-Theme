@@ -10,7 +10,11 @@ make_assets() {
   [[ "${color}" == '-Light' ]] && local ELSE_LIGHT="${color}"
   [[ "${color}" == '-Dark' ]] && local ELSE_DARK="${color}"
 
-  local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  if [[ "${name}" == 'Catppuccin' ]]; then
+    local THEME_DIR="${1}/${2}${3}${4}${5}"
+  else
+    local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
+  fi
 
   case "$theme" in
     '')
