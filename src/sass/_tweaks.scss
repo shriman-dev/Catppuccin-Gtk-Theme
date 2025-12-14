@@ -36,3 +36,5 @@ $float: 'false';
 
 // Gnome-Shell version
 $gnome_version: 'default';
+
+$overview-icon: if( $colorscheme == 'catppuccin' and $theme == 'orange', url(/usr/share/icons/crafted/app-grid.svg), none);
