@@ -1,8 +1,8 @@
 
 // Theme ColorScheme palette: default/nord/dracula
-@import 'color-palette-default';
+@import 'color-palette-catppuccin';
 
-$colorscheme: 'default';
+$colorscheme: 'catppuccin';
 
 // Color type
 $colortype: 'system'; // system/fixed : use system colors / use theme colors
@@ -11,7 +11,7 @@ $colortype: 'system'; // system/fixed : use system colors / use theme colors
 $opacity: 'default';
 
 // Theme primary color
-$theme: 'default';
+$theme: 'orange';
 
 // Theme size
 $compact: 'false';
@@ -26,7 +26,7 @@ $panel_opacity: 1.0;
 $blackness: 'false';
 
 // Windows outline style
-$rimless: 'false';
+$rimless: 'true';
 
 // Windows button style : mac/normal
 $window_button: 'mac';
