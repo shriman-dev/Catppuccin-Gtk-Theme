@@ -228,6 +228,16 @@
 }
 
 // Dash to panel
+.dashtopanelMainPanel .show-apps {
+    color: $panel-text-secondary !important;
+    width: 20px;
+    height: 20px;
+}
+
+.dashtopanelMainPanel .dash-item-container .show-apps .overview-icon {
+    color: $panel-text-secondary !important;
+}
+
 .dashtopanelMainPanel {
   .show-apps .overview-icon {
     color: $panel-text !important;
