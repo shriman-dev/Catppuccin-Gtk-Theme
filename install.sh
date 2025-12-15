@@ -96,7 +96,6 @@ EOF
 }
 
 install() {
-  set -x
   local dest="${1}"
   local name="${2}"
   local theme="${3}"
@@ -108,7 +107,7 @@ install() {
   [[ "${color}" == '-Light' ]] && local ELSE_LIGHT="${color}"
   [[ "${color}" == '-Dark' ]] && local ELSE_DARK="${color}"
 
-  if [[ "${name,,}" == "${scheme,,}" ]]; then
+  if [[ "${name,,}" == "$(tr -cd '[:alpha:]' <<< "${scheme,,}")" ]]; then
     local THEME_DIR="${1}/${2}${3}${4}${5}"
   else
     local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
@@ -618,7 +617,7 @@ link_libadwaita() {
   local size="${5}"
   local scheme="${6}"
 
-  if [[ "${name,,}" == "${scheme,,}" ]]; then
+  if [[ "${name,,}" == "$(tr -cd '[:alpha:]' <<< "${scheme,,}")" ]]; then
     local THEME_DIR="${1}/${2}${3}${4}${5}"
   else
     local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
@@ -713,7 +712,7 @@ uninstall() {
   local size="${5}"
   local scheme="${6}"
 
-  if [[ "${name,,}" == "${scheme,,}" ]]; then
+  if [[ "${name,,}" == "$(tr -cd '[:alpha:]' <<< "${scheme,,}")" ]]; then
     local THEME_DIR="${1}/${2}${3}${4}${5}"
   else
     local THEME_DIR="${1}/${2}${3}${4}${5}${6}"

@@ -10,7 +10,7 @@ make_assets() {
   [[ "${color}" == '-Light' ]] && local ELSE_LIGHT="${color}"
   [[ "${color}" == '-Dark' ]] && local ELSE_DARK="${color}"
 
-  if [[ "${name,,}" == "${scheme,,}" ]]; then
+  if [[ "${name,,}" == "$(tr -cd '[:alpha:]' <<< "${scheme,,}")" ]]; then
     local THEME_DIR="${1}/${2}${3}${4}${5}"
   else
     local THEME_DIR="${1}/${2}${3}${4}${5}${6}"

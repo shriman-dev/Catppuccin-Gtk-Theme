@@ -11,7 +11,7 @@ make_gtkrc() {
   [[ "${color}" == '-Dark' ]] && local ELSE_DARK="${color}"
 
   local GTKRC_DIR="${SRC_DIR}/main/gtk-2.0"
-  if [[ "${name,,}" == "${scheme,,}" ]]; then
+  if [[ "${name,,}" == "$(tr -cd '[:alpha:]' <<< "${scheme,,}")" ]]; then
     local THEME_DIR="${1}/${2}${3}${4}${5}"
   else
     local THEME_DIR="${1}/${2}${3}${4}${5}${6}"
