@@ -13,6 +13,7 @@
 .unlock-dialog {
   //reset
   border: none;
+  border-radius: $base_radius;
   background-color: transparent;
 
   StEntry {
@@ -23,9 +24,9 @@
     border-radius: $circular_radius;
     caret-color: on($osd);
 
-    @include entry(flat-normal, $tc: on($osd));
-    &:focus { @include entry(flat-focus, $tc: on($osd)); }
-    &:insensitive { @include entry(flat-insensitive, $tc: on($osd, disabled)); }
+    @include entry(normal, $bc: on(black, divider));
+    &:focus { @include entry(focus, $bc: on(black, divider)); }
+    &:insensitive { @include entry(insensitive, $bc: on(black, divider)); }
 
     StLabel.hint-text {
       color: on($osd, disabled);
@@ -37,16 +38,16 @@
   .modal-dialog-button {
     padding: 0 16px;
     border: none;
-    @include button(flat-normal, $tc: $primary-text);
-    &:hover, &:focus { @include button(flat-hover, $tc: $primary-text); }
-    &:active { @include button(flat-active, $tc: $primary-text); }
-    &:insensitive { @include button(flat-insensitive, $tc: rgba(white, 0.3)); }
+    @include button(flat-normal, $tc: on($osd));
+    &:hover, &:focus { @include button(hover, $tc: on($osd)); }
+    &:active { @include button(active, $tc: on($osd)); }
+    &:insensitive { @include button(insensitive, $tc: on($osd, disabled)); }
 
     &:default {
-      @include button(normal, $tc: $primary-text);
-      &:hover, &:focus { @include button(hover, $tc: $primary-text); }
-      &:active { @include button(active, $tc: $primary-text); }
-      &:insensitive { @include button(insensitive, $tc: rgba(white, 0.3)); }
+      @include button(normal, $tc: on($osd));
+      &:hover, &:focus { @include button(hover, $tc: on($osd)); }
+      &:active { @include button(active, $tc: on($osd)); }
+      &:insensitive { @include button(insensitive, $tc: on($osd, disabled)); }
     }
   }
 
@@ -113,7 +114,7 @@
   &:rtl .user-widget { padding-left: 1em; }
 
   &:focus {
-    background-color: $fill !important;
+    background-color: on(black, divider) !important;
 
     // .login-dialog-timed-login-indicator {
     //   background-color: $track;
@@ -121,12 +122,12 @@
   }
 
   &:hover, &:focus:hover {
-    background-color: $divider !important;
+    background-color: overlay(black, active) !important;
     color: on(black, secondary);
   }
 
   &:active, &:focus:active {
-    background-color: $track !important;
+    background-color: on(black, track) !important;
     color: on(black, secondary);
   }
 
